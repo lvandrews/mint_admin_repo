@@ -5,10 +5,16 @@
 ## standardized settings, and access to RAID.
 set -e
 
-# default group variable
-dgrp="ecoss"
+## Find scripts and repository location.
+    scriptdir="$( cd "$( dirname "$0" )" && pwd )"
+    repodir=`dirname $scriptdir`
+    filesdir="$repodir/home_directory_files"
+    htmldir="$repodir/html"
 
-# RAID drive variable
+# default group variable
+dgrp=`id -un`
+
+# RAID drive variable -- change as needed for your system
 raid="RAID1"
 
 echo "Set up a new user account. Sure.
@@ -19,7 +25,32 @@ use Ctrl-C to abandon the process and start over.
 This command needs to run with sudo to ensure adequate permissions
 for creating and modifying a new user account.
 
-Let me collect some info first.
+First, please check these default variables. If they are incorrect,
+correct them before proceeding further.
+
+Default group: $dgrp
+RAID drive: $raid
+
+Are these variables correct (y/n)?
+"
+    read yn
+if [ "$yn" == "n" ]; then
+    echo "
+Exiting.
+"
+    exit 1
+    elif [ "$yn" != "n" ] && [ "$yn" != "y" ]; then
+        echo "
+Sorry, I don't understand. Exiting.
+"
+        exit 1
+    elif [ "$yn" == "y" ]; then
+        echo "
+Great!
+"
+fi
+
+echo "Let me collect some info first.
 
 Enter the name of the new user (First Last):
 "
