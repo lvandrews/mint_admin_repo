@@ -26,12 +26,7 @@ Exiting.
         exit 1
     fi
 
-# default group variable
-dgrp=`id -un`
-
-# RAID drive variable -- change as needed for your system
-raid="RAID1"
-
+# Initial dialogue and collect default group and RAID information
 echo "Set up a new user account. Sure.
 
 This script is not made to handle errors. If you make a mistake,
@@ -39,8 +34,20 @@ use Ctrl-C to abandon the process and start over.
 
 This command needs to run with sudo to ensure adequate permissions
 for creating and modifying a new user account.
+"
+sleep 1s
 
-First, please check these default variables. If they are incorrect,
+echo "Enter the name of the default group on your system
+(e.g. enggen or ecoss):
+"
+read dgrp
+
+echo "Enter the name of the RAID drive on your system
+(e.g. RAID1 or RAID5):
+"
+read dgrp
+
+echo "Please check these default variables. If they are incorrect,
 correct them before proceeding further.
 
 Default group: $dgrp
