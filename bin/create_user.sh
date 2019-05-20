@@ -109,17 +109,17 @@ sudo chown $userid:$dgrp /home/$userid/Desktop/
 
 # Copy default settings to new account, adjust ownership, set placeholder for first login
 echo "Copying files..."
-cp $filesdir/.bashrc /home/$userid/
+cp $initdir/.bashrc /home/$userid/
 sudo chown $userid:$userid /home/$userid/.bashrc
-cp $filesdir/.profile /home/$userid/
+cp $initdir/.profile /home/$userid/
 sudo chown $userid:$userid /home/$userid/.profile
-cp -r $filesdir/.cinnamon/ /home/$userid/
+cp -r $initdir/.cinnamon/ /home/$userid/
 sudo chown -R $userid:$userid /home/$userid/.cinnamon/
-cp $filesdir/.cinnamon_settings /home/$userid/
+cp $initdir/.cinnamon_settings /home/$userid/
 sudo chown -R $userid:$userid /home/$userid/.cinnamon_settings
 echo "TRUE" > /home/$userid/.newuser
 sudo chown -R $userid:$userid /home/$userid/.newuser
-cp -r $filesdir/.local/ /home/$userid/.local/
+cp -r $initdir/.local/ /home/$userid/.local/
 sudo chown -R $userid:$userid /home/$userid/.local/
 cp -r $filesdir/.linuxmint/ /home/$userid/
 sudo chown -R $userid:$userid /home/$userid/.linuxmint/
