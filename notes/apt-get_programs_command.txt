@@ -1,0 +1,108 @@
+Set souftware sources (main and base) to os6.org
+
+#Repo for Veusz
+sudo add-apt-repository ppa:jeremysanders/ppa
+
+#Install mdadm and find existing RAID array
+sudo apt-get install mdadm
+
+#Install remaining apt-get programs
+sudo apt-get install htop fail2ban openssh-server gimp-plugin-registry gimp-data-extras veusz clementine build-essential python-dev python-pip git gpart gparted libfreetype6-dev ghc h5utils hdf5-tools r-cran-xml samtools mafft fastx-toolkit bedtools bowtie2 tophat cufflinks picard-tools abyss arb fastqc velvet ugene seaview treeview treeviewx subversion libgtk2.0-0 libxml2 libxslt1.1 cmake libssl-dev libxslt1-dev ant libmysqlclient-dev libsqlite3-dev libc6 tcl-dev tk-dev libatlas-base-dev swig libhdf5-serial-dev filezilla libcurl4-openssl-dev sendmail mysql-server apache2 php-mdb2 php-mdb2-driver-mysql libbam-dev nfs-common nfs-kernel-server screen autogen libjpeg62 preload dstat jags libreoffice xclip fasttree libtre-dev plink rdesktop mysql-client monit sqlite3 molly-guard monkeysphere rssh gmic libqt4-declarative-folderlistmodel libqt4-declarative-gestures libqt4-declarative-particles libqt4-declarative-shaders qt4-qmlviewer libqt4-dev qt4-qtconfig gfortran python-dev python-nose python-numpy-dbg python-numpy-doc python-qt4-dbg python-h5py python-astropy libqt4-dev odbc-postgresql tdsodbc unixodbc-bin libqt4-dev g++-multilib g++-7-multilib gcc-7-doc libstdc++6-7-dbg glibc-doc libstdc++-7-doc python-setuptools-doc python-cryptography-doc python-cryptography-vectors python-enum34-doc libkf5wallet-bin python-secretstorage-doc gir1.2-gnomekeyring-1.0 python-fs python-gdata python-keyczar git-doc git-el git-email git-gui gitk gitweb git-cvs git-mediawiki git-svn reiser4progs ghc-prof ghc-doc haskell-doc llvm gmp-doc libgmp10-doc libmpfr-dev ncurses-doc octave libhdf4-doc libhdf4-dev hdf4-tools tcl8.6 tk8.6 ess r-doc-info r-doc-pdf r-mathlib r-base-html autoconf-archive gnu-standards autoconf-doc devscripts dh-make dwz gfortran-multilib gfortran-doc gfortran-7-multilib gfortran-7-doc libgfortran4-dbg libcoarrays-dev liblapack-doc libglib2.0-doc libgraphite2-utils icu-doc liblzma-doc readline-doc libtool-doc libmail-box-perl texlive-base texlive-latex-base texlive-generic-recommended texlive-fonts-recommended texlive-fonts-extra texlive-extra-utils texlive-latex-recommended texlive-latex-extra texinfo gir1.2-rsvg-2.0 libtool-doc python-lockfile-doc python-pyparsing-doc python-rdflib-doc python-rdflib-tools python-openssl python-socks python-ntlm python-genshi python-lxml python-openssl-doc ri ruby-dev bundler apache2 lighttpd fonts-dustin bowtie2-examples libatinject-jsr330-api-java-doc libcommons-jexl2-java-doc libavalon-framework-java libcommons-logging-java-doc libexcalibur-logkit-java liblog4j1.2-java libjsr305-java-doc openmpi-bin gnuplot gv xfig libhwloc-contrib-plugins mrbayes-doc phylip-doc gsfonts-x11 spell xfig-doc velvet-example staden-io-lib-examples qt5-qmltooling-plugins libcommons-beanutils-java libcommons-codec-java libcommons-collections3-java libcommons-digester-java libcommons-jxpath-java libcommons-vfs-java libxml-commons-resolver1.1-java libcommons-lang-java-doc libnanoxml2-java-doc cluster3 db5.3-util libapache2-mod-svn subversion-tools gsl-ref-psdoc gsl-doc-pdf gsl-doc-info gsl-ref-html glibc-doc locales rng-tools gnutls-bin krb5-doc krb5-user librsvg2-common gvfs cmake-doc ninja-build antlr javacc junit junit4 jython libactivation-java libbcel-java libbsf-java libcommons-net-java libmail-java libjaxp1.3-java libjdepend-java libjsch-java liblog4j1.2-java liboro-java libregexp-java libxalan2-java libxml-commons-resolver1.1-java sqlite3-doc tcl-doc tcl-tclreadline tcl8.6-doc libice-doc libsm-doc libxcb-doc libxext-doc libxt-doc tk-doc tk8.6-doc libatlas-doc liblapack-doc swig-doc swig-examples swig3.0-examples swig3.0-doc libhdf5-doc sendmail-doc rmail logcheck resolvconf sasl2-bin tinyca libipc-sharedcache-perl apache2-doc apache2-suexec-pristine apache2-suexec-custom open-iscsi watchdog dracut-core byobu screenie iselect gpa imagemagick openclipart-libreoffice pstoedit unixodbc libreoffice-officebean postgresql mediawiki tre-agrep med-config blends-doc menu-l10n kde-runtime pcscd whois ncurses-term ssh-import-id gimp-gmic libqt4-sql-mysql libqt4-sql-odbc libqt4-sql-psql libqt4-sql-sqlite libqt5sql5-sqlite libqt5sql5-mysql libqt5sql5-odbc libqt5sql5-psql libqt5sql5-tds libqt5sql5-ibase clustalo muscle libgail-common libssl-doc ant-optional libx11-doc libhtml-template-perl autogen-doc fonts-crosextra-caladea fonts-crosextra-carlito fonts-linuxlibertine fonts-sil-gentium-basic libreoffice-librelogo libreoffice-nlpsolver libreoffice-report-builder libreoffice-script-provider-bsh libreoffice-script-provider-js libreoffice-script-provider-python libreoffice-sdbc-postgresql libreoffice-wiki-publisher fonts-sil-gentium gmap paml graphviz-doc libxml-sax-expatxs-perl libhtml-element-extended-perl uuid libmime-lite-perl libnet-jabber-perl libbareword-filehandles-perl libindirect-perl libmultidimensional-perl libdevel-lexalias-perl amap-align bowtie bwa clustalw emboss exonerate hmmer hyphy-mpi infernal kalign maq muscle primer3 probalign probcons sim4 t-coffee tigr-glimmer wise libbsd-resource-perl libapache2-reload-perl libgts-bin libfreezethaw-perl libclass-xsaccessor-perl libxmlrpc-lite-perl libdate-calc-perl libdate-manip-perl libtype-tiny-xs-perl libref-util-perl pastebinit run-one libmagickcore-6.q16-3-extra netpbm icoutils libqca2-plugins php-apcu php-intl php-curl php-wikidiff2 sysstat ccze speedometer vim dbtoepub docbook-xsl-doc-html docbook-xsl-doc-pdf docbook-xsl-doc-text docbook-xsl-saxon fop libsaxon-java libxslthl-java xalan imagemagick-doc enscript ffmpeg grads graphviz hp2xx html2ps libwmf-bin mplayer povray ufraw-batch djvulibre-bin finger hspell memcached clamav hhvm phonon-backend-vlc phonon4qt5-backend-gstreamer postgresql-doc locales-all postgresql-doc-10 gnuplot-doc javacc-doc junit-doc jython-doc libmysql-java libpostgresql-jdbc-java libbcel-java-doc bsh rhino libcommons-beanutils-java-doc libcommons-collections3-java-doc libcommons-digester-java-doc libcommons-jxpath-java-doc libjdom1-java libcommons-net-java-doc libcommons-vfs-java-doc libjnr-ffi-java-doc libjnr-netdb-java-doc libjnr-posix-java-doc liblog4j1.2-java-doc libmail-java-doc libbcpkix-java libcompress-lzf-java liblog4j2-java libprotobuf-java libslf4j-java libxalan2-java-doc libxsltc-java libxerces2-java-doc libxml-commons-resolver1.1-java-doc syslog-summary ruby-svn svn2cl netpbm default-jdk libcommons-collections4-java libcommons-httpclient-java libcuda-9.1-1 logcheck-database staden-io-lib-utils libconfig-inifiles-perl python-subversion xfig-libs python3.7 python3.7-venv python3.7-dev datamash libgsl-dev python3-pip python3-setuptools libbamtools2.4.0 bambam libbamtools-dev ucommon-utils
+
+
+
+## NEED TO INSTALL ALL BELOW INTO COMMON AREAS (/usr/bin/)
+#Download miniconda, make executable, install as python 3.7
+
+
+#Update conda:
+conda update -n base -c defaults conda
+
+#Add conda channels:
+conda config --add channels bioconda
+conda config --add channels conda-forge
+
+#Install qiime1:
+conda create -n qiime1.9.1 python=2.7 qiime matplotlib=1.4.3 mock nose -c bioconda
+conda install primerprospector
+
+#Download qiime2:
+wget -O ~/Downloads/ https://data.qiime2.org/distro/core/qiime2-2019.1-py36-linux-conda.yml
+
+#Install qiime2:
+conda env create -n qiime2-2019.1 --file Downloads/qiime2-2019.1-py36-linux-conda.yml
+conda install primerprospector
+
+# ALIASES
+alias q1='conda activate qiime1.9.1'
+alias q2='conda activate qiime2-2019.1'
+alias deac='conda deactivate; conda deactivate'
+
+
+#Vsearch:
+git clone https://github.com/torognes/vsearch.git
+cd vsearch
+./autogen.sh
+./configure
+make
+sudo make install
+
+#Bamtools:
+git clone git://github.com/pezmaster31/bamtools.git
+cd bamtools
+cmake ..
+make
+cp src/toolkit/bamtools /usr/bin/
+
+#fqgrep:
+git clone git://github.com/indraniel/fqgrep.git
+cd fqgrep
+make
+cp fqgrep /usr/bin/
+
+#ghost-tree:******* (broken)
+git clone https://github.com/JTFouquier/ghost-tree.git
+
+#akutils:******* (fix bashrc)
+git clone https://github.com/alk224/akutils-v1.2.git
+cd akutils-v1.2
+bash install
+#*** ADD TO PATH ***
+
+#ITSx:****** (missing from 3rd party packages, add bashrc)
+tar -xzvf akutils-v1.2/3rd_party_packages/ITSx_1.1.1.tar.gz -C /usr/bin
+#*** ADD TO PATH ***
+
+#ea-utils:****** (new address, missing from 3rd party packages, broken -- sparse hash library update?)
+tar -xzvf akutils-v1.2/3rd_party_packages/ExpressionAnalysis-ea-utils-1.04.807-18-gbd148d4.tar.gz -C akutils-v1.2/3rd_party_packages/
+cd /akutils-v1.2/3rd_party_packages/ExpressionAnalysis-ea-utils-bd148d4/clipper/
+make
+sudo mkdir /usr/bin/ea-utils
+sudo cp * /usr/bin/ea-utils
+#*** ADD TO PATH ***
+
+
+#cutadapt:
+sudo python3 -m pip install cutadapt
+
+#smalt:
+https://github.com/rcallahan/smalt.git
+cd smalt
+./configure
+make
+sudo make install
+
+#primerprospector:
+conda install primerprospector
+#*** Still need to replace analyze_primers.py file in python2.7/lib/ ***
+sudo cp akutils-v1.2/akutils_resources/analyze_primers.py .conda/envs/qiime1.9.1/bin/analyze_primers.py
+
+
+#To add to path, edit your .bashrc in nano and add the following lines including the comment line specifiying what was added
+
+## Add akutils to PATH
+PATH="$PATH:$HOME/akutils-v1.2/scripts"
+
+
+
+
