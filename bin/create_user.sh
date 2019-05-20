@@ -10,6 +10,21 @@ set -e
     repodir=`dirname $scriptdir`
     filesdir="$repodir/home_directory_files"
     htmldir="$repodir/html"
+    initdir="$repodir/collected"
+
+# Check if install has been run.
+    initrun=$(cat $repodir/.initrun)
+    if [ "$initrun" == "FALSE" ]; then
+        echo "
+The install.sh script has not been run. Navigate to the repository
+directory and run install.sh (bash install.sh) to collect files
+necessary for user account creation. Once done, you can use this
+script to create user accounts.
+
+Exiting.
+        "
+        exit 1
+    fi
 
 # default group variable
 dgrp=`id -un`
@@ -94,23 +109,23 @@ sudo chown $userid:$dgrp /home/$userid/Desktop/
 
 # Copy default settings to new account, adjust ownership, set placeholder for first login
 echo "Copying files..."
-cp /home/$dgrp/.bashrc /home/$userid/
+cp $filesdir/.bashrc /home/$userid/
 sudo chown $userid:$userid /home/$userid/.bashrc
-cp /home/$dgrp/.profile /home/$userid/
+cp $filesdir/.profile /home/$userid/
 sudo chown $userid:$userid /home/$userid/.profile
-cp -r /home/$dgrp/.cinnamon/ /home/$userid/
+cp -r $filesdir/.cinnamon/ /home/$userid/
 sudo chown -R $userid:$userid /home/$userid/.cinnamon/
-cp /home/$dgrp/.cinnamon_settings /home/$userid/
+cp $filesdir/.cinnamon_settings /home/$userid/
 sudo chown -R $userid:$userid /home/$userid/.cinnamon_settings
 echo "TRUE" > /home/$userid/.newuser
 sudo chown -R $userid:$userid /home/$userid/.newuser
-cp -r /home/$dgrp/.local/ /home/$userid/.local/
+cp -r $filesdir/.local/ /home/$userid/.local/
 sudo chown -R $userid:$userid /home/$userid/.local/
-cp -r /home/$dgrp/.linuxmint/ /home/$userid/
+cp -r $filesdir/.linuxmint/ /home/$userid/
 sudo chown -R $userid:$userid /home/$userid/.linuxmint/
 
 # Copy instruction file and adjust permissions
-cp /common/.Desktop_files/Data\ analysis\ information.html /home/$userid/Desktop/
+cp $htmldir/Data\ analysis\ information.html /home/$userid/Desktop/
 sudo chown $userid:$dgrp /home/$userid/Desktop/Data\ analysis\ information.html
 sudo chmod 666 /home/$userid/Desktop/Data\ analysis\ information.html
 
@@ -126,10 +141,10 @@ if [ ! -L /home/$userid/Desktop/RAID ]; then
 fi
 
 # Copy conda environment scripts
-cp /home/$dgrp/.condarc /home/$userid/
-cp /home/$dgrp/.default_env /home/$userid/
+cp $filesdir/.condarc /home/$userid/
+cp $filesdir/.default_env /home/$userid/
 sudo chown $userid:$userid /home/$userid/.default_env
-cp /home/$dgrp/.q1_env /home/$userid/
+cp $filesdir/.q1_env /home/$userid/
 sudo chown $userid:$userid /home/$userid/.q1_env
 
 # Report on new user
