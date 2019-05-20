@@ -1,4 +1,4 @@
-#!/usr/bin bash
+#!/usr/bin/env bash
 
 ## Lela Andrews May 20, 2019
 ## Script for collecting necessary information from Cinnamon
