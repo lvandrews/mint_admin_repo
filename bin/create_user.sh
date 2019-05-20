@@ -1,4 +1,4 @@
-#!/usr/bin bash
+#!/usr/bin/env bash
 
 ## Lela Andrews May 9, 2019
 ## Script for creating user accounts with standardized appearance, 
