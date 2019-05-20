@@ -15,6 +15,12 @@ set -e
 # default group variable
 dgrp=`id -un`
 
+# set .initrun if not present
+if [ ! -f "$repodir/.initrun" ]; then
+echo "FALSE" > $repodir/.initrun
+fi
+
+# check .initrun and start dialogue
 initrun=$(cat $repodir/.initrun)
 if [ "$initrun" == "FALSE" ]; then
     echo "
