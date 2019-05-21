@@ -45,7 +45,7 @@ read dgrp
 echo "Enter the name of the RAID drive on your system
 (e.g. RAID1 or RAID5):
 "
-read dgrp
+read raid
 
 echo "Please check these default variables. If they are incorrect,
 correct them before proceeding further.
@@ -143,12 +143,12 @@ if [ ! -d /$raid/$userid ]; then
 fi
 
 if [ ! -L /home/$userid/Desktop/RAID ]; then
-    ln -s /RAID1/$userid/ /home/$userid/Desktop/RAID
+    ln -s /$raid/$userid/ /home/$userid/Desktop/RAID
     sudo chown $userid:$userid /home/$userid/Desktop/RAID
 fi
 
 # Copy conda environment scripts
-cp $filesdir/.condarc /home/$userid/
+cp $initdir/.condarc /home/$userid/
 cp $filesdir/.default_env /home/$userid/
 sudo chown $userid:$userid /home/$userid/.default_env
 cp $filesdir/.q1_env /home/$userid/
