@@ -139,7 +139,8 @@ sudo chmod 666 /home/$userid/Desktop/Data\ analysis\ information.html
 # Make user directory on RAID and link to user desktop
 if [ ! -d /$raid/$userid ]; then
     sudo mkdir /$raid/$userid
-    sudo chown $userid:$dgrp /$raid/$userid
+    sudo chown $userid:$dgrp /$raid/$userid/
+    sudo chmod 775 /$raid/$userid/
 fi
 
 if [ ! -L /home/$userid/Desktop/RAID ]; then
